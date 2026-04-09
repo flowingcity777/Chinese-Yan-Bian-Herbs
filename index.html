@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acupuncture Clinic Homepage</title>
+  <title>Chinese Yan Bian Herbs</title>
   <style>
     :root {
       --bg: #f7f4ef;
@@ -75,7 +75,7 @@
 
     h1 {
       font-size: clamp(2.7rem, 6vw, 4.9rem);
-      max-width: 11ch;
+      max-width: 12ch;
     }
 
     h2 {
@@ -97,7 +97,7 @@
       top: 0;
       z-index: 10;
       backdrop-filter: blur(12px);
-      background: rgba(251, 249, 246, 0.8);
+      background: rgba(251, 249, 246, 0.85);
       border-bottom: 1px solid rgba(231, 221, 211, 0.8);
     }
 
@@ -139,7 +139,8 @@
     .service-card,
     .feature-card,
     .contact-card,
-    .testimonial {
+    .testimonial,
+    .form-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
@@ -215,18 +216,26 @@
       gap: 22px;
     }
 
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
     .card,
     .service-card,
     .feature-card,
     .contact-card,
-    .testimonial {
+    .testimonial,
+    .form-card {
       padding: 24px;
     }
 
     .service-card p,
     .feature-card p,
     .contact-card p,
-    .testimonial p {
+    .testimonial p,
+    .form-card p {
       margin-top: 8px;
     }
 
@@ -283,6 +292,54 @@
       color: var(--muted);
     }
 
+    form {
+      margin-top: 18px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-note {
+      margin-top: 14px;
+      font-size: 0.94rem;
+    }
+
     footer {
       padding: 38px 0 68px;
       text-align: center;
@@ -293,8 +350,10 @@
       .hero-grid,
       .grid-2,
       .grid-3,
+      .grid-4,
       .trust-strip,
-      .contact-layout {
+      .contact-layout,
+      .form-grid {
         grid-template-columns: 1fr;
       }
 
@@ -327,13 +386,13 @@
   <header class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">Thoughtful Acupuncture Care</div>
-        <h1>Balance, comfort, and personalized support</h1>
+        <div class="eyebrow">Acupuncture & Traditional Chinese Medicine</div>
+        <h1>Personalized care in a calm, attentive setting</h1>
         <p>
-          Gentle acupuncture and holistic care in a calm, respectful setting. Each treatment begins with listening carefully to your concerns, goals, and experience.
+          Acupuncture is at the heart of our practice. Treatments are guided by traditional Chinese medicine and tailored to each individual, with a focus on comfort, balance, and thoughtful support.
         </p>
         <p>
-          Whether you are seeking support for stress, tension, pain management, or general wellness, care is tailored to the individual rather than rushed through a one-size-fits-all process.
+          Whether you are seeking support for pain, stress, tension, or overall wellness, care is designed around your needs rather than a one-size-fits-all approach.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Request Appointment</a>
@@ -342,7 +401,7 @@
       </div>
 
       <div class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Calm clinic treatment room with warm light and minimal decor" />
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Calm treatment room with soft natural light" />
       </div>
     </div>
   </header>
@@ -354,27 +413,27 @@
           <div class="eyebrow">About the Clinic</div>
           <h2>A calm and attentive approach to care</h2>
           <p>
-            At Chinese Yan Bian Herbs, care begins by understanding the person behind the symptoms. Treatments are designed to support comfort, balance, and well-being through a calm and individualized experience.
+            At Chinese Yan Bian Herbs, care begins by understanding the person behind the symptoms. Each visit is guided by traditional Chinese medicine principles and shaped by your health history, concerns, and goals.
           </p>
         </div>
 
         <div class="grid-2">
           <div class="card">
-            <h3>Practitioner philosophy</h3>
+            <h3>Personalized, patient-centered care</h3>
             <p>
-              Care is grounded in listening, patience, and respect. The goal is to create a treatment experience that feels thoughtful, supportive, and clear from the first visit onward.
+              The focus is on creating a treatment experience that feels clear, respectful, and supportive from the first visit onward.
             </p>
             <ul class="service-list">
               <li>Personalized treatment plans</li>
-              <li>Gentle, patient-centered care</li>
+              <li>Gentle, attentive care</li>
               <li>A calm and private environment</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Why patients visit</h3>
+            <h3>What patients commonly seek support for</h3>
             <p>
-              Patients commonly seek care for stress, tension, pain support, sleep concerns, general wellness, and other health goals that benefit from a personalized and restorative approach.
+              Patients often visit for pain and tension support, stress, fatigue, sleep concerns, and general wellness. Care is tailored to the individual and may include acupuncture, traditional Chinese medicine consultation, herbal support, and cupping therapy.
             </p>
             <p style="margin-top: 16px;" class="quote">
               Care is designed to support the body’s natural processes while helping patients feel seen, heard, and comfortable.
@@ -403,46 +462,59 @@
       <div class="container">
         <div class="section-header">
           <div class="eyebrow">Services</div>
-          <h2>Holistic support tailored to individual needs</h2>
+          <h2>Acupuncture-led care with traditional Chinese medicine support</h2>
           <p>
-            Services can be adjusted to reflect the practitioner’s actual offerings. The structure below keeps information clear and easy for patients to scan.
+            Services can be adjusted to match the clinic’s exact offerings, while keeping the experience clear and easy for patients to understand.
           </p>
         </div>
 
-        <div class="grid-3">
+        <div class="grid-4">
           <div class="service-card">
             <h3>Acupuncture</h3>
             <p>
-              Fine needles are placed at specific points on the body as part of a personalized treatment plan.
+              Acupuncture involves the placement of fine needles at specific points on the body as part of a personalized treatment plan.
             </p>
             <ul class="service-list">
-              <li>Pain management support</li>
-              <li>Stress and tension support</li>
-              <li>General wellness care</li>
+              <li>Pain and tension support</li>
+              <li>Stress and fatigue support</li>
+              <li>Sleep concerns</li>
+              <li>General wellness</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h3>Traditional Chinese Medicine Consultation</h3>
+            <p>
+              Consultations are used to understand your overall condition, including symptoms, lifestyle, and patterns of imbalance.
+            </p>
+            <ul class="service-list">
+              <li>Health history review</li>
+              <li>Individualized treatment planning</li>
+              <li>Ongoing care adjustments</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h3>Herbal Support</h3>
+            <p>
+              Herbal support may be recommended as part of a broader treatment plan when appropriate.
+            </p>
+            <ul class="service-list">
+              <li>Tailored recommendations</li>
+              <li>Complementary support</li>
+              <li>Integrated with acupuncture care</li>
             </ul>
           </div>
 
           <div class="service-card">
             <h3>Cupping Therapy</h3>
             <p>
-              Gentle suction is used to support circulation, relaxation, and muscular comfort.
+              Cupping therapy uses gentle suction to support circulation and muscle relaxation.
             </p>
             <ul class="service-list">
               <li>Muscle tension support</li>
               <li>Relaxation and recovery</li>
-              <li>Complementary treatment option</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <h3>Herbal Consultation</h3>
-            <p>
-              Guidance on traditional herbal approaches can be offered when appropriate to the patient’s needs.
-            </p>
-            <ul class="service-list">
-              <li>Individualized recommendations</li>
-              <li>Wellness-focused support</li>
-              <li>Integrated treatment planning</li>
+              <li>Used alongside acupuncture when appropriate</li>
             </ul>
           </div>
         </div>
@@ -455,7 +527,7 @@
           <div class="eyebrow">What to Expect</div>
           <h2>Clear guidance from your first visit</h2>
           <p>
-            New patients often feel more comfortable when they know what the visit will be like. This section reduces uncertainty and helps build trust before booking.
+            New patients often feel more comfortable when they know what the visit will be like. This section helps reduce uncertainty and build trust before booking.
           </p>
         </div>
 
@@ -463,27 +535,27 @@
           <div class="feature-card">
             <h3>1. Consultation</h3>
             <p>
-              Your first visit includes time to discuss concerns, health history, symptoms, and goals before treatment begins.
+              Your first visit includes time to discuss your concerns, health history, and goals before treatment begins.
             </p>
           </div>
           <div class="feature-card">
             <h3>2. Personalized treatment</h3>
             <p>
-              A tailored treatment plan is explained clearly so patients know what to expect during the session.
+              A tailored treatment plan is explained clearly so you know what to expect during the session.
             </p>
           </div>
           <div class="feature-card">
             <h3>3. Follow-up care</h3>
             <p>
-              Ongoing care may be adjusted over time based on response, comfort, and overall wellness goals.
+              Ongoing care may be adjusted over time based on your response, comfort, and wellness goals.
             </p>
           </div>
         </div>
 
         <div class="testimonial" style="margin-top: 22px;">
-          <h3>Frequently asked questions can be added here</h3>
+          <h3>Common questions</h3>
           <p>
-            Examples: Is acupuncture painful? How long is a session? How many visits might I need? This gives the clinic an easy place to answer common concerns without overwhelming the homepage.
+            Many patients ask whether acupuncture is painful, how long a session lasts, or how many visits they may need. These questions can be answered in a future FAQ section or discussed during the first consultation.
           </p>
         </div>
       </div>
@@ -493,29 +565,95 @@
       <div class="container">
         <div class="section-header">
           <div class="eyebrow">Contact & Appointments</div>
-          <h2>Simple contact now, flexible scheduling later</h2>
+          <h2>Simple appointment requests with room to grow</h2>
           <p>
-            This homepage uses a straightforward contact and appointment-request layout. A more advanced owner-managed scheduling system can be added later as the clinic’s needs grow.
+            This version uses a straightforward appointment request form. It keeps the process easy for patients while giving the clinic owner flexibility to confirm and adjust scheduling manually.
           </p>
         </div>
 
         <div class="contact-layout">
-          <div class="contact-card">
+          <div class="form-card">
             <h3>Request an appointment</h3>
             <p>
-              For now, this section can connect to a form, email workflow, or simple booking tool. It keeps the process easy for patients while giving the clinic owner flexibility to confirm availability manually.
+              Fill out the form below with your preferred service and time. The clinic can review requests and follow up to confirm availability.
             </p>
-            <div class="hero-actions" style="margin-top: 22px;">
-              <a class="btn btn-primary" href="mailto:cuihonghua97125@yahoo.com">Email the clinic</a>
-              <a class="btn btn-secondary" href="tel:+1(847)813-6268">Call now</a>
-            </div>
+
+            <form>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="First name" />
+                </div>
+
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Last name" />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" />
+                </div>
+
+                <div class="form-group">
+                  <label for="service">Service</label>
+                  <select id="service" name="service">
+                    <option>Acupuncture</option>
+                    <option>Traditional Chinese Medicine Consultation</option>
+                    <option>Herbal Support</option>
+                    <option>Cupping Therapy</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="preferredDate">Preferred Date</label>
+                  <input type="date" id="preferredDate" name="preferredDate" />
+                </div>
+
+                <div class="form-group">
+                  <label for="preferredTime">Preferred Time</label>
+                  <select id="preferredTime" name="preferredTime">
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="visitType">Visit Type</label>
+                  <select id="visitType" name="visitType">
+                    <option>New Patient</option>
+                    <option>Returning Patient</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Share any scheduling notes or questions here."></textarea>
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+                <a class="btn btn-secondary" href="mailto:clinic@example.com">Email Instead</a>
+              </div>
+
+              <p class="form-note">
+                This form is a design placeholder for appointment requests. In a future version, it can be connected to email, a booking tool, or an owner-managed scheduling system.
+              </p>
+            </form>
           </div>
 
           <div class="contact-card">
             <h3>Clinic information</h3>
-            <p><strong>Address</strong>8876 N Milwaukee Ave, Niles, IL 60714</p>
-            <p style="margin-top: 14px;"><strong>Email</strong>cuihonghua97125@yahoo.com</p>
-            <p style="margin-top: 14px;"><strong>Phone</strong>(847)813-6268</p>
+            <p><strong>Address</strong>123 Healing Street, Your City, State</p>
+            <p style="margin-top: 14px;"><strong>Email</strong>clinic@example.com</p>
+            <p style="margin-top: 14px;"><strong>Phone</strong>(000) 000-0000</p>
 
             <div class="hours">
               <div class="hours-row"><span>Monday</span><span>9:00 AM – 5:00 PM</span></div>
@@ -524,6 +662,10 @@
               <div class="hours-row"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></div>
               <div class="hours-row"><span>Friday</span><span>9:00 AM – 3:00 PM</span></div>
             </div>
+
+            <p style="margin-top: 18px;">
+              For urgent questions or scheduling changes, calling the clinic directly is the fastest option.
+            </p>
           </div>
         </div>
       </div>
@@ -532,7 +674,7 @@
 
   <footer>
     <div class="container">
-      © 2026 [Clinic Name]. Calm, thoughtful care for your well-being.
+      © 2026 Chinese Yan Bian Herbs — Acupuncture & Traditional Chinese Medicine
     </div>
   </footer>
 </body>
