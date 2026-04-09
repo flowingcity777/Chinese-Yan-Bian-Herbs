@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acupuncture Clinic Homepage</title>
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --surface: #ffffff;
+      --surface-soft: #f2ede6;
+      --text: #2f2a26;
+      --muted: #6e655d;
+      --border: #e7ddd3;
+      --accent: #7b9274;
+      --accent-soft: #e7efe4;
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fbf9f6 0%, var(--bg) 100%);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      border-radius: var(--radius-md);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max-width), 92%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 76px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 14px;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 4.9rem);
+      max-width: 11ch;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+      background: rgba(251, 249, 246, 0.8);
+      border-bottom: 1px solid rgba(231, 221, 211, 0.8);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .hero {
+      padding: 38px 0 54px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-copy,
+    .hero-visual,
+    .card,
+    .service-card,
+    .feature-card,
+    .contact-card,
+    .testimonial {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 36px;
+    }
+
+    .hero-copy p {
+      max-width: 58ch;
+      margin-top: 12px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      transition: transform 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--text);
+    }
+
+    .hero-visual {
+      padding: 14px;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      min-height: 480px;
+      object-fit: cover;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card,
+    .service-card,
+    .feature-card,
+    .contact-card,
+    .testimonial {
+      padding: 24px;
+    }
+
+    .service-card p,
+    .feature-card p,
+    .contact-card p,
+    .testimonial p {
+      margin-top: 8px;
+    }
+
+    .service-list,
+    .feature-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 14px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .feature-card {
+      background: var(--surface-soft);
+      box-shadow: none;
+    }
+
+    .quote {
+      font-size: 1.08rem;
+      color: var(--text);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+    }
+
+    .contact-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .hours {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 38px 0 68px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3,
+      .trust-strip,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-visual img {
+        min-height: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav class="nav">
+        <div class="brand">Chinese Yan Bian Herbs</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#expect">What to Expect</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Thoughtful Acupuncture Care</div>
+        <h1>Balance, comfort, and personalized support</h1>
+        <p>
+          Gentle acupuncture and holistic care in a calm, respectful setting. Each treatment begins with listening carefully to your concerns, goals, and experience.
+        </p>
+        <p>
+          Whether you are seeking support for stress, tension, pain management, or general wellness, care is tailored to the individual rather than rushed through a one-size-fits-all process.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Request Appointment</a>
+          <a class="btn btn-secondary" href="#services">Explore Services</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Calm clinic treatment room with warm light and minimal decor" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">About the Clinic</div>
+          <h2>A calm and attentive approach to care</h2>
+          <p>
+            At Chinese Yan Bian Herbs, care begins by understanding the person behind the symptoms. Treatments are designed to support comfort, balance, and well-being through a calm and individualized experience.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Practitioner philosophy</h3>
+            <p>
+              Care is grounded in listening, patience, and respect. The goal is to create a treatment experience that feels thoughtful, supportive, and clear from the first visit onward.
+            </p>
+            <ul class="service-list">
+              <li>Personalized treatment plans</li>
+              <li>Gentle, patient-centered care</li>
+              <li>A calm and private environment</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Why patients visit</h3>
+            <p>
+              Patients commonly seek care for stress, tension, pain support, sleep concerns, general wellness, and other health goals that benefit from a personalized and restorative approach.
+            </p>
+            <p style="margin-top: 16px;" class="quote">
+              Care is designed to support the body’s natural processes while helping patients feel seen, heard, and comfortable.
+            </p>
+          </div>
+        </div>
+
+        <div class="trust-strip">
+          <div class="feature-card">
+            <h3>Licensed care</h3>
+            <p>Professional treatment in a respectful, private clinical setting.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Personalized visits</h3>
+            <p>Each session is shaped by your symptoms, health history, and goals.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Calm environment</h3>
+            <p>A quieter pace designed to help patients feel safe and at ease.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Services</div>
+          <h2>Holistic support tailored to individual needs</h2>
+          <p>
+            Services can be adjusted to reflect the practitioner’s actual offerings. The structure below keeps information clear and easy for patients to scan.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="service-card">
+            <h3>Acupuncture</h3>
+            <p>
+              Fine needles are placed at specific points on the body as part of a personalized treatment plan.
+            </p>
+            <ul class="service-list">
+              <li>Pain management support</li>
+              <li>Stress and tension support</li>
+              <li>General wellness care</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h3>Cupping Therapy</h3>
+            <p>
+              Gentle suction is used to support circulation, relaxation, and muscular comfort.
+            </p>
+            <ul class="service-list">
+              <li>Muscle tension support</li>
+              <li>Relaxation and recovery</li>
+              <li>Complementary treatment option</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h3>Herbal Consultation</h3>
+            <p>
+              Guidance on traditional herbal approaches can be offered when appropriate to the patient’s needs.
+            </p>
+            <ul class="service-list">
+              <li>Individualized recommendations</li>
+              <li>Wellness-focused support</li>
+              <li>Integrated treatment planning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="expect">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">What to Expect</div>
+          <h2>Clear guidance from your first visit</h2>
+          <p>
+            New patients often feel more comfortable when they know what the visit will be like. This section reduces uncertainty and helps build trust before booking.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-card">
+            <h3>1. Consultation</h3>
+            <p>
+              Your first visit includes time to discuss concerns, health history, symptoms, and goals before treatment begins.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>2. Personalized treatment</h3>
+            <p>
+              A tailored treatment plan is explained clearly so patients know what to expect during the session.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>3. Follow-up care</h3>
+            <p>
+              Ongoing care may be adjusted over time based on response, comfort, and overall wellness goals.
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial" style="margin-top: 22px;">
+          <h3>Frequently asked questions can be added here</h3>
+          <p>
+            Examples: Is acupuncture painful? How long is a session? How many visits might I need? This gives the clinic an easy place to answer common concerns without overwhelming the homepage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Contact & Appointments</div>
+          <h2>Simple contact now, flexible scheduling later</h2>
+          <p>
+            This homepage uses a straightforward contact and appointment-request layout. A more advanced owner-managed scheduling system can be added later as the clinic’s needs grow.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-card">
+            <h3>Request an appointment</h3>
+            <p>
+              For now, this section can connect to a form, email workflow, or simple booking tool. It keeps the process easy for patients while giving the clinic owner flexibility to confirm availability manually.
+            </p>
+            <div class="hero-actions" style="margin-top: 22px;">
+              <a class="btn btn-primary" href="mailto:cuihonghua97125@yahoo.com">Email the clinic</a>
+              <a class="btn btn-secondary" href="tel:+1(847)813-6268">Call now</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Clinic information</h3>
+            <p><strong>Address</strong>8876 N Milwaukee Ave, Niles, IL 60714</p>
+            <p style="margin-top: 14px;"><strong>Email</strong>cuihonghua97125@yahoo.com</p>
+            <p style="margin-top: 14px;"><strong>Phone</strong>(847)813-6268</p>
+
+            <div class="hours">
+              <div class="hours-row"><span>Monday</span><span>9:00 AM – 5:00 PM</span></div>
+              <div class="hours-row"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></div>
+              <div class="hours-row"><span>Wednesday</span><span>By appointment</span></div>
+              <div class="hours-row"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></div>
+              <div class="hours-row"><span>Friday</span><span>9:00 AM – 3:00 PM</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 [Clinic Name]. Calm, thoughtful care for your well-being.
+    </div>
+  </footer>
+</body>
+</html>
