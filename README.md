@@ -74,7 +74,7 @@ Instead of building a complex system, the appointment flow is intentionally simp
 
 ## 📍 Live Preview
 
-*(Add your GitHub Pages link here once deployed)*
+*[(Add your GitHub Pages link here once deployed)](https://flowingcity777.github.io/Chinese-Yan-Bian-Herbs/)*
 
 ---
 
