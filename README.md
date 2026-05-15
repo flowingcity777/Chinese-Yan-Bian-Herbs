@@ -73,7 +73,7 @@ Chinese-Yan-Bian-Herbs/
 ## Live Site
 
 GitHub Pages deployment:
-[(https://flowingcity777.github.io/natural-path/)]
+[https://flowingcity777.github.io/natural-path/]
 
 ## Project Status
 
