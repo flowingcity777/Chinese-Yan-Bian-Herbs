@@ -3,679 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chinese Yan Bian Herbs</title>
-  <style>
-    :root {
-      --bg: #f7f4ef;
-      --surface: #ffffff;
-      --surface-soft: #f2ede6;
-      --text: #2f2a26;
-      --muted: #6e655d;
-      --border: #e7ddd3;
-      --accent: #7b9274;
-      --accent-soft: #e7efe4;
-      --shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --max-width: 1120px;
-    }
 
-    * {
-      box-sizing: border-box;
-    }
+  <title>Natural Path | Yan Bian Acumedic Clinic</title>
 
-    html {
-      scroll-behavior: smooth;
-    }
+  <meta
+    name="description"
+    content="Natural Path is a restored static website concept for Yan Bian Acumedic Clinic, focused on acupuncture, Chinese herbal medicine, wellness services, and patient trust."
+  />
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #fbf9f6 0%, var(--bg) 100%);
-      line-height: 1.6;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      border-radius: var(--radius-md);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(var(--max-width), 92%);
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 76px 0;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.92rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 16px;
-    }
-
-    h1, h2, h3 {
-      margin: 0 0 14px;
-      line-height: 1.15;
-    }
-
-    h1 {
-      font-size: clamp(2.7rem, 6vw, 4.9rem);
-      max-width: 12ch;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 2.7rem);
-    }
-
-    h3 {
-      font-size: 1.2rem;
-    }
-
-    p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.03rem;
-    }
-
-    .nav-wrap {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(12px);
-      background: rgba(251, 249, 246, 0.85);
-      border-bottom: 1px solid rgba(231, 221, 211, 0.8);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 18px 0;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.01em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .hero {
-      padding: 38px 0 54px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .hero-copy,
-    .hero-visual,
-    .card,
-    .service-card,
-    .feature-card,
-    .contact-card,
-    .testimonial,
-    .form-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-copy {
-      padding: 36px;
-    }
-
-    .hero-copy p {
-      max-width: 58ch;
-      margin-top: 12px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid var(--border);
-      transition: transform 0.15s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: var(--text);
-      color: #fff;
-      border-color: var(--text);
-    }
-
-    .btn-secondary {
-      background: #fff;
-      color: var(--text);
-    }
-
-    .hero-visual {
-      padding: 14px;
-    }
-
-    .hero-visual img {
-      width: 100%;
-      min-height: 480px;
-      object-fit: cover;
-    }
-
-    .section-header {
-      max-width: 760px;
-      margin-bottom: 28px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .card,
-    .service-card,
-    .feature-card,
-    .contact-card,
-    .testimonial,
-    .form-card {
-      padding: 24px;
-    }
-
-    .service-card p,
-    .feature-card p,
-    .contact-card p,
-    .testimonial p,
-    .form-card p {
-      margin-top: 8px;
-    }
-
-    .service-list,
-    .feature-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 14px;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .trust-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .feature-card {
-      background: var(--surface-soft);
-      box-shadow: none;
-    }
-
-    .quote {
-      font-size: 1.08rem;
-      color: var(--text);
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
-    }
-
-    .contact-card strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--text);
-    }
-
-    .hours {
-      display: grid;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .hours-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    form {
-      margin-top: 18px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--text);
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      font: inherit;
-      color: var(--text);
-      background: #fff;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .form-note {
-      margin-top: 14px;
-      font-size: 0.94rem;
-    }
-
-    footer {
-      padding: 38px 0 68px;
-      text-align: center;
-      color: var(--muted);
-    }
-
-    @media (max-width: 920px) {
-      .hero-grid,
-      .grid-2,
-      .grid-3,
-      .grid-4,
-      .trust-strip,
-      .contact-layout,
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-visual img {
-        min-height: 320px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="nav-wrap">
-    <div class="container">
-      <nav class="nav">
-        <div class="brand">Chinese Yan Bian Herbs</div>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#expect">What to Expect</a>
-          <a href="#contact">Contact</a>
-        </div>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo/logo.png" alt="Natural Path logo" />
+        <span>Natural Path</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </div>
-  </div>
-
-  <header class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="eyebrow">Acupuncture & Traditional Chinese Medicine</div>
-        <h1>Personalized care in a calm, attentive setting</h1>
-        <p>
-          Acupuncture is at the heart of our practice. Treatments are guided by traditional Chinese medicine and tailored to each individual, with a focus on comfort, balance, and thoughtful support.
-        </p>
-        <p>
-          Whether you are seeking support for pain, stress, tension, or overall wellness, care is designed around your needs rather than a one-size-fits-all approach.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Request Appointment</a>
-          <a class="btn btn-secondary" href="#services">Explore Services</a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Calm treatment room with soft natural light" />
-      </div>
     </div>
   </header>
 
   <main>
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">About the Clinic</div>
-          <h2>A calm and attentive approach to care</h2>
-          <p>
-            At Chinese Yan Bian Herbs, care begins by understanding the person behind the symptoms. Each visit is guided by traditional Chinese medicine principles and shaped by your health history, concerns, and goals.
-          </p>
-        </div>
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Personalized, patient-centered care</h3>
-            <p>
-              The focus is on creating a treatment experience that feels clear, respectful, and supportive from the first visit onward.
-            </p>
-            <ul class="service-list">
-              <li>Personalized treatment plans</li>
-              <li>Gentle, attentive care</li>
-              <li>A calm and private environment</li>
-            </ul>
-          </div>
+      <div class="container hero-content">
+        <p class="eyebrow">Yan Bian Acumedic Clinic</p>
+        <h1>Natural healing rooted in tradition and care.</h1>
+        <p class="hero-text">
+          A restored wellness website concept for a family-owned acupuncture and
+          Chinese herbal medicine clinic serving patients through natural,
+          thoughtful, and personalized care.
+        </p>
 
-          <div class="card">
-            <h3>What patients commonly seek support for</h3>
-            <p>
-              Patients often visit for pain and tension support, stress, fatigue, sleep concerns, and general wellness. Care is tailored to the individual and may include acupuncture, traditional Chinese medicine consultation, herbal support, and cupping therapy.
-            </p>
-            <p style="margin-top: 16px;" class="quote">
-              Care is designed to support the body’s natural processes while helping patients feel seen, heard, and comfortable.
-            </p>
-          </div>
-        </div>
-
-        <div class="trust-strip">
-          <div class="feature-card">
-            <h3>Licensed care</h3>
-            <p>Professional treatment in a respectful, private clinical setting.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Personalized visits</h3>
-            <p>Each session is shaped by your symptoms, health history, and goals.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Calm environment</h3>
-            <p>A quieter pace designed to help patients feel safe and at ease.</p>
-          </div>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">Learn About the Clinic</a>
+          <a href="#services" class="btn btn-secondary">View Services</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">Services</div>
-          <h2>Acupuncture-led care with traditional Chinese medicine support</h2>
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2>A family wellness practice with decades of care.</h2>
           <p>
-            Services can be adjusted to match the clinic’s exact offerings, while keeping the experience clear and easy for patients to understand.
+            Yan Bian Acumedic Clinic is a family-owned practice. Ms. HongHua Cui
+            is a second-generation L.Ac, OMD, continuing a healing tradition
+            started by Ms. Xu about forty years ago.
+          </p>
+          <p>
+            The clinic has served many patients through acupuncture and Chinese
+            herbal medicine, helping people recover and care for their health in
+            natural ways.
           </p>
         </div>
 
-        <div class="grid-4">
-          <div class="service-card">
+        <div class="about-image">
+          <img
+            src="assets/images/about/about-part.jpg"
+            alt="Natural wellness and herbal medicine"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Services</p>
+          <h2>Care designed around natural recovery.</h2>
+          <p>
+            This restored static version preserves the original service concept
+            while removing backend scheduling and account dependencies.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
             <h3>Acupuncture</h3>
             <p>
-              Acupuncture involves the placement of fine needles at specific points on the body as part of a personalized treatment plan.
+              Traditional acupuncture care focused on supporting balance,
+              recovery, and wellness.
             </p>
-            <ul class="service-list">
-              <li>Pain and tension support</li>
-              <li>Stress and fatigue support</li>
-              <li>Sleep concerns</li>
-              <li>General wellness</li>
-            </ul>
-          </div>
+          </article>
 
-          <div class="service-card">
-            <h3>Traditional Chinese Medicine Consultation</h3>
+          <article class="card">
+            <h3>Chinese Herbal Medicine</h3>
             <p>
-              Consultations are used to understand your overall condition, including symptoms, lifestyle, and patterns of imbalance.
+              Herbal wellness support inspired by traditional Chinese medicine
+              practices.
             </p>
-            <ul class="service-list">
-              <li>Health history review</li>
-              <li>Individualized treatment planning</li>
-              <li>Ongoing care adjustments</li>
-            </ul>
-          </div>
+          </article>
 
-          <div class="service-card">
-            <h3>Herbal Support</h3>
+          <article class="card">
+            <h3>Wellness Consultation</h3>
             <p>
-              Herbal support may be recommended as part of a broader treatment plan when appropriate.
+              Patient-centered consultation experience designed to understand
+              needs and guide care options.
             </p>
-            <ul class="service-list">
-              <li>Tailored recommendations</li>
-              <li>Complementary support</li>
-              <li>Integrated with acupuncture care</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <h3>Cupping Therapy</h3>
-            <p>
-              Cupping therapy uses gentle suction to support circulation and muscle relaxation.
-            </p>
-            <ul class="service-list">
-              <li>Muscle tension support</li>
-              <li>Relaxation and recovery</li>
-              <li>Used alongside acupuncture when appropriate</li>
-            </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="expect">
+    <section id="products" class="section products-section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">What to Expect</div>
-          <h2>Clear guidance from your first visit</h2>
+          <p class="eyebrow">Products</p>
+          <h2>Herbal and wellness product concept.</h2>
           <p>
-            New patients often feel more comfortable when they know what the visit will be like. This section helps reduce uncertainty and build trust before booking.
+            The original full-stack project included online shopping concepts.
+            This version preserves the product idea as a static visual archive.
           </p>
         </div>
 
-        <div class="grid-3">
-          <div class="feature-card">
-            <h3>1. Consultation</h3>
-            <p>
-              Your first visit includes time to discuss your concerns, health history, and goals before treatment begins.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h3>2. Personalized treatment</h3>
-            <p>
-              A tailored treatment plan is explained clearly so you know what to expect during the session.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h3>3. Follow-up care</h3>
-            <p>
-              Ongoing care may be adjusted over time based on your response, comfort, and wellness goals.
-            </p>
-          </div>
-        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img
+              src="assets/images/project/project5.png"
+              alt="Natural wellness product"
+            />
+            <h3>Herbal Wellness</h3>
+            <p>Static product showcase from the original project concept.</p>
+          </article>
 
-        <div class="testimonial" style="margin-top: 22px;">
-          <h3>Common questions</h3>
-          <p>
-            Many patients ask whether acupuncture is painful, how long a session lasts, or how many visits they may need. These questions can be answered in a future FAQ section or discussed during the first consultation.
-          </p>
+          <article class="product-card">
+            <img
+              src="assets/images/project/project4.png"
+              alt="Traditional wellness product"
+            />
+            <h3>Traditional Care</h3>
+            <p>Preserved visual direction for future product exploration.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">Contact & Appointments</div>
-          <h2>Simple appointment requests with room to grow</h2>
-          <p>
-            This version uses a straightforward appointment request form. It keeps the process easy for patients while giving the clinic owner flexibility to confirm and adjust scheduling manually.
-          </p>
-        </div>
+    <section id="project-note" class="section note-section">
+      <div class="container note-card">
+        <p class="eyebrow">Project Restoration</p>
+        <h2>From full-stack bootcamp project to static archive.</h2>
+        <p>
+          This website was originally built as a full-stack application using
+          React, Node, GraphQL, Apollo Server, MongoDB Atlas, and Heroku. It has
+          been restored as a lightweight HTML, CSS, and JavaScript website for
+          long-term preservation, GitHub Pages hosting, and portfolio
+          documentation.
+        </p>
+      </div>
+    </section>
 
-        <div class="contact-layout">
-          <div class="form-card">
-            <h3>Request an appointment</h3>
-            <p>
-              Fill out the form below with your preferred service and time. The clinic can review requests and follow up to confirm availability.
-            </p>
-
-            <form>
-              <div class="form-grid">
-                <div class="form-group">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" name="firstName" placeholder="First name" />
-                </div>
-
-                <div class="form-group">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" name="lastName" placeholder="Last name" />
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="you@example.com" />
-                </div>
-
-                <div class="form-group">
-                  <label for="phone">Phone</label>
-                  <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" />
-                </div>
-
-                <div class="form-group">
-                  <label for="service">Service</label>
-                  <select id="service" name="service">
-                    <option>Acupuncture</option>
-                    <option>Traditional Chinese Medicine Consultation</option>
-                    <option>Herbal Support</option>
-                    <option>Cupping Therapy</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="preferredDate">Preferred Date</label>
-                  <input type="date" id="preferredDate" name="preferredDate" />
-                </div>
-
-                <div class="form-group">
-                  <label for="preferredTime">Preferred Time</label>
-                  <select id="preferredTime" name="preferredTime">
-                    <option>Morning</option>
-                    <option>Afternoon</option>
-                    <option>Evening</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="visitType">Visit Type</label>
-                  <select id="visitType" name="visitType">
-                    <option>New Patient</option>
-                    <option>Returning Patient</option>
-                  </select>
-                </div>
-
-                <div class="form-group full">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" placeholder="Share any scheduling notes or questions here."></textarea>
-                </div>
-              </div>
-
-              <div class="hero-actions">
-                <button type="submit" class="btn btn-primary">Submit Request</button>
-                <a class="btn btn-secondary" href="mailto:cuihonghua97125@yahoo.com">Email Instead</a>
-              </div>
-
-              <p class="form-note">
-                This form is a design placeholder for appointment requests. In a future version, it can be connected to email, a booking tool, or an owner-managed scheduling system.
-              </p>
-            </form>
-          </div>
-
-          <div class="contact-card">
-            <h3>Clinic information</h3>
-            <p><strong>Address</strong>8876 N Milwaukee Ave, Niles, IL</p>
-            <p style="margin-top: 14px;"><strong>Email</strong>cuihonghua97125@yahoo.com</p>
-            <p style="margin-top: 14px;"><strong>Phone</strong>(847) 813-6268</p>
-
-            <div class="hours">
-              <div class="hours-row"><span>Monday</span><span>9:00 AM – 5:00 PM</span></div>
-              <div class="hours-row"><span>Tuesday</span><span>9:00 AM – 5:00 PM</span></div>
-              <div class="hours-row"><span>Wednesday</span><span>By appointment</span></div>
-              <div class="hours-row"><span>Thursday</span><span>9:00 AM – 5:00 PM</span></div>
-              <div class="hours-row"><span>Friday</span><span>9:00 AM – 3:00 PM</span></div>
-            </div>
-
-            <p style="margin-top: 18px;">
-              For urgent questions or scheduling changes, calling the clinic directly is the fastest option.
-            </p>
-          </div>
-        </div>
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Natural Path</h2>
+        <p>
+          This static version is maintained as a portfolio restoration project
+          documenting the original clinic website concept.
+        </p>
+        <a href="#home" class="btn btn-primary">Back to Top</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      © 2026 Chinese Yan Bian Herbs — Acupuncture & Traditional Chinese Medicine
-    </div>
+  <footer class="site-footer">
+    <p>
+      Originally developed as a full-stack bootcamp project and restored as a
+      static website archive by Lydia L.
+    </p>
   </footer>
 </body>
 </html>
