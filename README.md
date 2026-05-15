@@ -1,88 +1,92 @@
-# Chinese Yan Bian Herbs — Clinic Website
+# Natural Path
 
-A calm, patient-centered website designed for an acupuncture clinic offering traditional Chinese medicine services.
+Restored static wellness website inspired by a family-owned acupuncture and Chinese herbal medicine clinic originally developed as a full-stack bootcamp project.
 
-## 🌿 Overview
+## Project Overview
 
-This project focuses on designing a clear, trustworthy digital experience for a real-world acupuncture clinic.
+Natural Path is a portfolio restoration project preserving the visual direction, wellness concepts, and user experience goals of the original Yan Bian Acumedic Clinic website.
 
-The goal was to:
-- present services in a simple and understandable way
-- build trust through tone, structure, and clarity
-- support patients in requesting appointments easily
-- create a manageable foundation for future scheduling features
+The original project was built using a modern full-stack architecture including React, GraphQL, Apollo Server, MongoDB Atlas, and Node.js. This restored version has been simplified into a lightweight static website for long-term maintainability, GitHub Pages deployment, and portfolio preservation.
 
----
+## Project Goals
 
-## ✨ Features
+- Restore and preserve an original bootcamp project
+- Simplify a complex full-stack architecture into a maintainable static website
+- Preserve visual identity and wellness-focused user experience
+- Create a clean GitHub Pages deployment
+- Maintain long-term accessibility without dependency maintenance
 
-- Clean, calming homepage design
-- Acupuncture-led service presentation
-- Traditional Chinese medicine context
-- Structured "What to Expect" section to reduce uncertainty
-- Simple appointment request form (UI-focused)
-- Responsive layout for mobile and desktop
+## Technologies Used
 
----
+### Original Project
+- React
+- Node.js
+- Express
+- GraphQL
+- Apollo Server
+- MongoDB Atlas
+- Heroku
 
-## 🧠 UX Focus
+### Restored Static Version
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
 
-This project emphasizes:
+## Features
 
-### 1. Trust & Clarity
-Healthcare websites require clear, respectful communication.  
-The design avoids exaggerated claims and focuses on helping patients feel informed and comfortable.
+- Responsive wellness-focused homepage
+- Acupuncture and herbal medicine service sections
+- Product and wellness showcase
+- Simplified static architecture
+- Mobile-friendly layout
+- Lightweight deployment structure
 
-### 2. Reducing Uncertainty
-Sections like “What to Expect” guide new patients through the process before their first visit.
+## Restoration Approach
 
-### 3. Simplicity for Real Use
-Instead of building a complex system, the appointment flow is intentionally simple:
-- request-based (not instant booking)
-- easy for patients
-- flexible for the clinic owner
+The restored version intentionally removes:
+- backend authentication
+- database dependencies
+- package maintenance requirements
+- outdated deployment services
+- server-side infrastructure
 
----
+while preserving:
+- original design direction
+- wellness branding
+- educational and clinic concepts
+- visual storytelling
+- user experience structure
 
-## 🧩 Design Decisions
+## Repository Structure
 
-- Acupuncture is presented as the primary service
-- Herbal support and cupping therapy are secondary, supporting services
-- Language is calm, neutral, and patient-focused
-- Layout prioritizes readability and spacing
+Chinese-Yan-Bian-Herbs/
+│
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── images/
+├── README.md
+└── project-notes.txt
 
----
+## Live Site
 
-## 🚀 Future Improvements
+GitHub Pages deployment:
+https://flowingcity777.github.io/Chinese-Yan-Bian-Herbs/
 
-- Connect appointment form to email or backend
-- Add owner-managed scheduling system
-- Expand FAQ section
-- Improve accessibility (ARIA labels, keyboard navigation)
-- Separate CSS into external stylesheet
+## Project Status
 
----
+Ongoing restoration and modernization project.
 
-## 🛠️ Tech Stack
+Future improvements may include:
+- multilingual support
+- accessibility improvements
+- refined typography
+- expanded wellness content
+- image optimization
+- additional static pages
 
-- HTML  
-- CSS  
+## Author
 
-(No backend — frontend UX prototype)
-
----
-
-## 📍 Live Preview
-
-*https://flowingcity777.github.io/Chinese-Yan-Bian-Herbs/*
-
----
-
-## 💭 Reflection
-
-This project demonstrates the ability to design for real-world constraints, balancing:
-- patient needs
-- clinic operations
-- clear and trustworthy communication
-
----
+Lydia L
